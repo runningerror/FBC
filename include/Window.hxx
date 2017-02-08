@@ -1,17 +1,21 @@
 #ifndef WINDOW_HXX_
 #define WINDOW_HXX_
 
-#include <SDL.h>
+#include <WindowCreInfo.hxx>
 
 class Window
 {
 private:
+	SDL_Window* _window;
+
+	void createWindow(WindowCreInfo&& creInfo);
+	bool isVideoInitialized();
 protected:
 public:
 	static void setGLVersionMajor(int ver);
 	static void setGLVersionMinor(int ver);
 
-	explicit Window();
+	explicit Window(WindowCreInfo&& creInfo);
 	virtual ~Window() noexcept;
 };
 

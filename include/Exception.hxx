@@ -15,6 +15,7 @@ public:
   virtual ~Exception() noexcept;
 
   virtual const char* what() const noexcept override;
+  virtual std::string what_str() const noexcept;
 };
 
 #endif

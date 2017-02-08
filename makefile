@@ -26,7 +26,10 @@ LDFLAGS = 	-L$(LIB_DIR) \
 
 OBJECTS = $(BIN_DIR)/main.o \
 					$(BIN_DIR)/Window.o \
-					$(BIN_DIR)/Exception.o
+					$(BIN_DIR)/Exception.o \
+					$(BIN_DIR)/WindowCreInfo.o \
+					$(BIN_DIR)/CreationFailedException.o \
+					$(BIN_DIR)/NotInitializedException.o
 
 OUTPUT = FBC
 

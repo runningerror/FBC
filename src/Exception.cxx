@@ -16,3 +16,8 @@ const char* Exception::what() const noexcept
 {
   return _message.c_str();
 }
+
+std::string Exception::what_str() const noexcept
+{
+  return _message;
+}
